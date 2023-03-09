@@ -42,6 +42,26 @@ import {
       icon: typescript,
     },
     {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "git",
+      icon: git,
+    },
+    {
+      name: "React JS",
+      icon: reactjs,
+    },
+    {
+      name: "flutter",
+      icon: flutter,
+    },
+    {
+      name: "Redux Toolkit",
+      icon: redux,
+    },
+    {
       name: "HTML 5",
       icon: html,
     },
@@ -54,20 +74,8 @@ import {
       icon: javascript,
     },
     {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
       name: "Tailwind CSS",
       icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
     },
     {
       name: "MongoDB",
@@ -76,14 +84,6 @@ import {
     {
       name: "Firebase",
       icon: firebase,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "flutter",
-      icon: flutter,
     },
     {
       name: "docker",

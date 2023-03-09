@@ -16,7 +16,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index *0.25, 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -29,7 +29,7 @@ const ProjectCard = ({
           <img
             src={image}
             alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
+            className='w-full h-full object-cover rounded-2xl md:w-full sm:w-5/12'
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>

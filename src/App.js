@@ -9,18 +9,21 @@ import Contact from "./components/Contact";
 const App = () => {
   return (
     <BrowserRouter>
-    <div className='relative z-0 bg-primary'>
+    <div className='relative w-full z-0 bg-primary'>
       <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
         <Navbar />
         <Hero />
       </div>
-      <div className='relative z-0 bg-primary'>
-      <Experience />
+      <div className='relative h-full w-full z-0 bg-primary'>
         <Tech />
+        </div>
+        
+        <div className='relative w-full z-0 bg-primary'>
+        <Experience />
         <Projects />
+        </div>
         <Contact />
       </div>
-    </div>
   </BrowserRouter>
   );
 }
