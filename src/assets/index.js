@@ -17,6 +17,7 @@ import mongodb from './mongodb.png';
 import tailwind from './tailwind.png';
 import redux from './redux.png';
 import typescript from './typescript.png';
+import github from "./github.png";
 
 export {
     redux,
@@ -38,4 +39,5 @@ export {
     logo,
     menu,
     close,
+    github
 };   
