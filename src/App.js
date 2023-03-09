@@ -5,26 +5,25 @@ import Tech from "./components/Tech";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import StarsCanvas from "./components/canvas/Stars";
 
 const App = () => {
   return (
     <BrowserRouter>
-    <div className='relative w-full z-0 bg-primary'>
-      <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-        <Navbar />
-        <Hero />
-      </div>
-      <div className='relative h-full w-full z-0 bg-primary'>
-        <Tech />
+      <div className='relative z-0 bg-primary'>
+        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+          <Navbar />
+          <Hero />
         </div>
-        
-        <div className='relative w-full z-0 bg-primary'>
         <Experience />
+        <Tech />
         <Projects />
+        <div className='relative z-0'>
+          <Contact />
+          <StarsCanvas />
         </div>
-        <Contact />
       </div>
-  </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
