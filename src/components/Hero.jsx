@@ -30,6 +30,7 @@ const Hero = () => {
   }, []);
 
   return (
+    <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
     <section className="relative w-full h-screen mx-auto ">
       <div className="absolute grid grid-flow-col grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 gap-4">
         <div className="mt-20 flex items-center justify-center">
@@ -77,6 +78,7 @@ const Hero = () => {
       </div>
       </div>
     </section>
+    </div>
   );
 };
 

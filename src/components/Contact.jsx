@@ -5,10 +5,12 @@ import EarthCanvas  from "./canvas/Earth.jsx";
 import SectionWrapper from "./utils/SectionWrapper";
 import { slideIn } from "./utils/motion";
 import { Contacts } from "./constants/constants.js";
+import StarsCanvas from "./canvas/Stars.jsx";
 
 const Contact = () => {
 
   return (
+    <section className="w-full h-full mx-auto ">
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
@@ -45,6 +47,8 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
+    <StarsCanvas />
+    </section>
   );
 };
 

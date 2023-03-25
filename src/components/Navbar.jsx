@@ -51,6 +51,7 @@ const Navbar = () => {
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
+            <Link to={nav.title}>
             <li
               key={nav.id}
               className={`${
@@ -60,6 +61,7 @@ const Navbar = () => {
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
+            </Link>
           ))}
         </ul>
 
@@ -78,6 +80,7 @@ const Navbar = () => {
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
+                <Link to={nav.title}>
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
@@ -90,6 +93,7 @@ const Navbar = () => {
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
+                </Link>
               ))}
             </ul>
           </div>

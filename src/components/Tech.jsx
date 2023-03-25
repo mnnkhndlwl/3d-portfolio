@@ -28,7 +28,9 @@ const Tech = () => {
 
   return (
     <>
-     <section className="  w-full h-screen mx-auto">
+    <section className="w-full h-full flex-row flex-wrap justify-center flex">
+
+   
       <div className="relative w-full h-screen justify-center flex ">
         <h2 className="tracking-normal text-2xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
           Technologies
@@ -64,7 +66,7 @@ const Tech = () => {
             
           </div>
           <div
-            className=" justify-center items-center"
+            className="mb-20 justify-center items-center"
             style={{ width: "55%" }}
           >
             <div className="m:50"></div>
