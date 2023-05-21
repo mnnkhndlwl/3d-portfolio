@@ -1,84 +1,174 @@
-import React,{useState,useEffect} from "react";
-import { styles } from "../styles";
+import React, { Suspense } from "react";
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import ComputersCanvas from "./canvas/computers";
-import '../index.css';
-import { motion } from "framer-motion";
+import "./hero.css";
+
+const Section = styled.div`
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+ background-color: #130f40;
+background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+
+  @media only screen and (max-width: 768px) {
+  }
+`;
+
+const Container = styled.div`
+  height: 100%;
+  scroll-snap-align: center;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+const Left = styled.div`
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+  }
+`;
+
+const Title = styled.p`
+  font-size: 64px;
+  color: #fd01fd;
+  font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+`;
+
+const WhatWeDo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const Line = styled.img`
+  height: 5px;
+`;
+
+const Subtitle = styled.h1`
+  font-size: 20px;
+`;
+
+const Desc = styled.p`
+  font-size: 16px;
+  text-align: justify;
+  color: white;
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    text-align: justify;
+  }
+`;
+
+const Button = styled.button`
+  background-color: #da4ea2;
+  color: white;
+  font-weight: 500;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+const Right = styled.div`
+  flex: 3;
+  position: relative;
+  @media only screen and (max-width: 768px) {
+    display: none;
+    flex: 0;
+  }
+`;
+
+const Img = styled.iframe`
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
 
 const Hero = () => {
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
-
   return (
-    <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-    <section className="relative w-full h-screen mx-auto ">
-      <div className="absolute grid grid-flow-col grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 gap-4">
-        <div className="mt-20 flex items-center justify-center">
-          <main className="max-w-screen-xl px-4 lg:px-16">
-            <div className="text-left">
-              <h2
-                className={`text-4xl tracking-tight leading-10 font-extrabold ${styles.heroHeadText} text-white sm:text-5xl sm:leading-none md:text-6xl`}
-              >
-                Hi, I'm
-                <br />
-                <span className="text-violet-700 writer-text">Manan</span>
-              </h2>
-              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                I am a Full stack Developer and a Problem-Solving enthusiast
-                pursuing Computer Science Engineering. I have a passion for
-                software development with diverse skillsets ranging from MERN,
-                Flutter, Firebase, and SQL to a stronghold on data structures
-                and algorithms.
-              </p>
-            </div>
-          </main>
-        </div>
-        <div className="w-full lg:w-full md:h-screen flex justify-self-center ">
-          <ComputersCanvas />
-        </div>
-          <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
-        {
-          isMobile || 
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
-            />
-          </div>
-        }
-        </a>
-      </div>
-      </div>
-    </section>
-    </div>
+    <>
+      <Section>
+        <Navbar />
+        <Container>
+          <Left>
+            <WhatWeDo>
+              <Subtitle>👋 Hi There ! I am </Subtitle>
+            </WhatWeDo>
+            <Title>Manan Khandelwal</Title>
+            <Desc>
+              I am a highly motivated Full Stack Developer and Computer Science
+              Engineering student with a strong passion for software development
+              and a keen interest in problem-solving. I possess a diverse skill
+              set that encompasses various technologies and frameworks,
+              including MERN (MongoDB, Express.js, React.js, Node.js), Flutter,
+              Firebase, and SQL.
+            </Desc>
+            <ul className="social-icons">
+              <li>
+                <a href="https://www.instagram.com/dev4.07/">
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mnnkhndlwl">
+                  <i className="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mnnkhndlwl/">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </Left>
+          <Right>
+            <Img src="https://embed.lottiefiles.com/animation/99065"></Img>
+            {/* <ComputersCanvas /> */}
+          </Right>
+        </Container>
+      </Section>
+    </>
   );
 };
 

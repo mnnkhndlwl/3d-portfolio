@@ -1,105 +1,103 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import styled from "styled-components";
 
-import { styles } from "../styles.js";
-import { navLinks } from "../../src/components/constants/constants";
-import { logo, menu, close } from "../assets/index.js";
+const Section = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const Container = styled.div`
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
+  }
+`;
+
+const Links = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 50px;
+`;
+
+const Logo = styled.img`
+  height: 30px;
+`;
+
+const List = styled.ul`
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 24px;
+  font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const ListItem = styled.li`
+font-size: 16px;
+  cursor: pointer;
+`;
+
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+`;
+
+const Icon = styled.img`
+  width: 20px;
+  cursor: pointer;
+`;
+
+const Button = styled.button`
+  width: 100px;
+  padding: 10px;
+  background: #FD01FD;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      }`}
-    >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to='/'
-          className='flex items-center gap-2'
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain rounded-full' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Manan &nbsp;
-            <span className='sm:block hidden'> | mnnkhndlwl</span>
-          </p>
-        </Link>
-
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
-            <Link to={nav.title}>
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-            </Link>
-          ))}
-        </ul>
-
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? close : menu}
-            alt='menu'
-            className='w-[28px] h-[28px] object-contain'
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
-                <Link to={nav.title}>
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-                </Link>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <Section>
+      <Container>
+        <Links>
+          <Logo src="./logo512.png" />
+          <List>
+          <a href="#">
+            <ListItem>Home</ListItem>
+          </a>
+          <a href="#projects"> 
+            <ListItem>Projects</ListItem>
+          </a>
+          <a href="#tech">
+            <ListItem>Technologies</ListItem>
+          </a>
+          <a href="#contact">
+            <ListItem>Contact</ListItem>
+          </a>
+          </List>
+        </Links>
+        <Icons>
+        <a href="https://www.linkedin.com/in/mnnkhndlwl/">
+          <Button>Hire Now</Button>
+        </a>
+        </Icons>
+      </Container>
+    </Section>
   );
 };
 

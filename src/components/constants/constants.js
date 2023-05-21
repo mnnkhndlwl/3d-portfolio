@@ -151,7 +151,7 @@ import {
     {
       name: "Twitter clone",
       description:
-        "Twitter clone built with flutter and appwrite.Used flutter for frontend and appwrite for backend.used appwrite authentication,storage and database. it has all the basic features of twitter like tweeting, liking , retweet and commenting.",
+        "Twitter clone built with flutter and appwrite.used appwrite authentication,storage and database. it has all the basic features of twitter like tweeting, liking , retweet and commenting.",
       tags: [
         {
           name: "flutter",
@@ -187,7 +187,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: "https://www.techsciresearch.com/admin/gall_content/2022/3/2022_3$blog_Online%20Grocery%20Delivery%202.0%20-%20TechSci%20Research.jpg_25_Mar_2022_105059033.jpg",
+      image: "./deli.png",
       source_code_link: "https://github.com/mnnkhndlwl/deliveroo-2.0",
     },
     {
@@ -250,7 +250,7 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: "https://user-images.githubusercontent.com/75252077/153710690-d832e683-db78-4584-9588-aabab0c4aef2.png",
+      image: "./gifdown.png",
       source_code_link: "https://github.com/mnnkhndlwl/Chrome-Extension/tree/main/Gif%20Downloader",
     },
   ];

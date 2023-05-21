@@ -1,93 +1,76 @@
-import React, { useEffect, useState } from "react";
 import { technologies } from "./constants/constants";
-import SectionWrapper from "./utils/SectionWrapper";
+import StarWrapper from "./utils/SectionWrapper";
+import styled from "styled-components";
+
+const Section = styled.div`
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  background-color: #130f40;
+  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  @media only screen and (max-width: 768px) {
+    scroll-snap-align: start;
+  }
+`;
+
+const Container = styled.div`
+  height: 100%;
+  scroll-snap-align: start;
+  width: 1400px;
+  display: flex;
+  justify-content: space-around;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 const Tech = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
-
   return (
-    <>
-    <section className="w-full h-full flex-row flex-wrap justify-center flex">
-
-   
-      <div className="relative w-full h-screen justify-center flex ">
-        <h2 className="tracking-normal text-2xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
-          Technologies
-        </h2>
-
-        <div className="absolute grid grid-flow-col h-screen grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 gap-2">
-          <div
-            className="relative items-center justify-center h-screen"
-            style={{ width: "25%" }}
-          >
-          {
-            !isMobile ? 
-            <lottie-player
-              src="https://assets9.lottiefiles.com/packages/lf20_ba013t74.json"
-              mode="bounce"
-              background="rgba(0, 0, 0, 0)"
-              speed="2"
-              style={{ width: "600px", height: "600px" }}
-              loop
-              autoplay
-            ></lottie-player>
-            :
-            <lottie-player
-              src="https://assets9.lottiefiles.com/packages/lf20_ba013t74.json"
-              mode="bounce"
-              background="rgba(0, 0, 0, 0)"
-              speed="2"
-              style={{ width: "410px", height: "410px" }}
-              loop
-              autoplay
-            ></lottie-player>
-          }
-            
+    <Section>
+      <Container>
+        <div class="container py-10 px-10 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="text-4xl font-bold title-font mb-4 text-white">
+              Technologies
+            </h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+              I possess extensive knowledge and expertise in a wide range of
+              cutting-edge technologies, ranging from full-stack development to
+              cloud computing and DevOps methodologies.
+            </p>
           </div>
-          <div
-            className="mb-20 justify-center items-center"
-            style={{ width: "55%" }}
-          >
-            <div className="m:50"></div>
-            <div className="flex-1 absolute mt-20 ml-5 flex gap-5 flex-wrap space-x-5 space-y-10">
-              {technologies.map((technology) => (
-                <div className="mt-10 ">
-                  <div
-                    key={technology.name}
-                    className="w-20 h-20 rounded-full bg-white"
-                  >
-                    <img src={technology.icon} />
+          {/* <div class="flex flex-wrap m-3"> */}
+          <div class="grid grid-cols-2 gap-10 mt-8 xl:mt-16 md:grid-cols-1 xl:grid-cols-5 xl:gap-10">
+            {technologies.map((tech) => {
+              return (
+                <div class="p-2 lg:w-1/4 md:w-1/4">
+                  <div class="h-full flex flex-col items-center">
+                    <img
+                      alt="team"
+                      class="flex rounded-lg w-full h-20 object-contain mb-4"
+                      src={tech.icon}
+                    />
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-white text-center">
+                        {tech.name}
+                      </h2>
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
-      </div>
-      </section>
-    </>
+      </Container>
+    </Section>
   );
 };
 
-export default SectionWrapper(Tech, "Tech");
+export default StarWrapper(Tech, "tech");
