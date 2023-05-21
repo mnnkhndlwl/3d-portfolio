@@ -9,6 +9,9 @@ const Section = styled.div`
   color: white;
   background-color: #130f40;
   background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  @media only screen and (max-width: 768px) {
+    width:100vw;
+  }
 `;
 
 const Container = styled.div`

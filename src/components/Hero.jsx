@@ -45,6 +45,7 @@ const Left = styled.div`
 
   @media only screen and (max-width: 768px) {
     align-items: center;
+    flex:1;
   }
 `;
 
@@ -54,6 +55,7 @@ const Title = styled.p`
   font-weight: bold;
   @media only screen and (max-width: 768px) {
     text-align: center;
+    font-size: 40px;
   }
 `;
 

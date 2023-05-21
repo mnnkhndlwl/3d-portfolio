@@ -12,6 +12,10 @@ const Section = styled.div`
   color: white;
   background-color: #130f40;
   background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  @media only screen and (max-width: 768px) {
+    height: 100vh;
+    width:80vw;
+  }
 `;
 
 const Container = styled.div`
@@ -21,17 +25,23 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 2rem;
+  @media only screen and (max-width: 768px) {
+    height: 100vh;
+    width: 80vw;
+  }
 `;
 
 const Carousal = styled.div`
   width: 85vw;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @media only Screen and (max-width: 40em) {
-    width: 85vw;
+    width: 90vw;
+    height: 80vh;
+    margin-bottom: 20px;
     .slick-slider .slick-arrow {
       display: none;
     }

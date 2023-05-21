@@ -13,6 +13,7 @@ const Section = styled.div`
   background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
   @media only screen and (max-width: 768px) {
     scroll-snap-align: start;
+    width:80vw;
   }
 `;
 
@@ -24,7 +25,7 @@ const Container = styled.div`
   justify-content: space-around;
 
   @media only screen and (max-width: 768px) {
-    width: 100%;
+    width: 80%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
