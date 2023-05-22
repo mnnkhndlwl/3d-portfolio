@@ -25,6 +25,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 2rem;
+  z-index: 12;
   @media only screen and (max-width: 768px) {
     height: 100vh;
     width: 80vw;
@@ -100,7 +101,7 @@ function Projects() {
   return (
     <Section>
       <Container>
-        <div className="container mb-5 px-6 mx-auto">
+        <div className="z-20 container mb-5 px-6 mx-auto">
           <section className="mb-5 text-white text-center">
             <h2 className="text-5xl sm:text-xl md:text-5xl font-bold mb-12 italic">
             

@@ -23,7 +23,7 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-around;
-
+  z-index: 10;
   @media only screen and (max-width: 768px) {
     width: 80%;
     flex-direction: column;
@@ -48,7 +48,7 @@ const Tech = () => {
             </p>
           </div>
           {/* <div class="flex flex-wrap m-3"> */}
-          <div class="grid grid-cols-2 gap-10 mt-8 xl:mt-16 md:grid-cols-1 xl:grid-cols-5 xl:gap-10">
+          <div class="grid grid-cols-3 gap-10 mt-8 xl:mt-16 md:grid-cols-4 sm:grid-cols-3 xl:grid-cols-5 xl:gap-10">
             {technologies.map((tech) => {
               return (
                 <div class="p-2 lg:w-1/4 md:w-1/4">

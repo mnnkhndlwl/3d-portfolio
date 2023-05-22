@@ -27,7 +27,7 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
-
+  z-index: 10;
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;

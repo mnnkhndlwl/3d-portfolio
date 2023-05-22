@@ -4,6 +4,8 @@ import Tech from "./components/Tech";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Github from "./components/Github";
+import Particle from "./components/utils/particle";
 
 
 // const Container = styled.div`
@@ -33,10 +35,12 @@ const App = () => {
   return <>
    <Container>
    <Hero />
+        <Github />
         <Tech />
     <Projects />
     <Contact />
     <Footer />
+    <Particle />
   </Container>
   </>
 };

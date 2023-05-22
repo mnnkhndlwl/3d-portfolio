@@ -21,6 +21,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 2rem;
+  z-index: 10;
 `;
 
 const Contact = () => {
@@ -53,7 +54,7 @@ const Contact = () => {
   return (
     <Section>
       <Container>
-        <div class="py-10 mx-auto">
+        <div class="z-30 py-10 mx-auto">
           <div class="mx-4 flex flex-wrap lg:justify-between">
             <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div class="mb-12 max-w-[570px] lg:mb-0">
@@ -150,7 +151,7 @@ const Contact = () => {
               }
                 </form>
                 <div>
-                  {/* <span class="absolute -top-10 -right-9 z-[-1]">
+                  <span class="absolute -top-10 -right-9 z-[-1]">
                     <svg
                       width="100"
                       height="100"
@@ -166,7 +167,7 @@ const Contact = () => {
                       />
                     </svg>
                   </span>
-                  <span class="absolute right-10 top-[90px] z-[-1]">
+                  <span class="absolute -right-10 top-[90px] z-[-1]">
                     <svg
                       width="34"
                       height="134"
@@ -385,7 +386,7 @@ const Contact = () => {
                         fill="#13C296"
                       />
                     </svg>
-                  </span> */}
+                  </span>
                   <span class="absolute -left-7 -bottom-7 z-[-1]">
                     <svg
                       width="107"

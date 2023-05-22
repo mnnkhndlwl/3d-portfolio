@@ -13,21 +13,22 @@ const Section = styled.div`
 
 const Container = styled.div`
   max-width: 1400px;
+  z-index: 40;
 `;
 
 function Footer() {
   return (
     <Section>
       <Container>
-        <footer class="bg-black rounded-lg shadow m-4">
-          <div class="w-full mx-auto max-w-screen-xl p-2 md:flex md:items-center md:justify-between">
+        <footer class=" bg-black rounded-lg shadow m-4">
+          <div class=" w-full mx-auto max-w-screen-xl p-2 md:flex md:items-center md:justify-between">
             <span class="">
               © 2023{" "}
               <a href="https://flowbite.com/" class="hover:underline">
                 mnnkhndlwl
               </a>
             </span>
-            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <ul class="z-50 flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
               <li>
                 <a href="#" class="mr-4 hover:underline md:mr-6 ">
                   Home
