@@ -92,8 +92,8 @@ const Navbar = () => {
           </List>
         </Links>
         <Icons>
-        <a href="https://www.linkedin.com/in/mnnkhndlwl/">
-          <Button>Hire Now</Button>
+        <a href="https://drive.google.com/file/d/1D1bqBkMNQFrxPFwt8BQjkT6fJVnZftyy/view?usp=sharing">
+          <Button>Resume</Button>
         </a>
         </Icons>
       </Container>
