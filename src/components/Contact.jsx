@@ -7,10 +7,10 @@ const Section = styled.div`
   width: 100%;
   height: 100vh;
   color: white;
-  background-color: #130f40;
-  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  background-color: black;
+  ${'' /* background-image: linear-gradient(315deg, #130f40 0%, #000000 74%); */}
   @media only screen and (max-width: 768px) {
-    width:100vw;
+    width: 100vw;
   }
 `;
 
@@ -75,7 +75,7 @@ const Contact = () => {
                     <div class="w-full">
                       <h4 class="text-dark mb-1 text-xl font-bold">Github</h4>
                       <p class="text-body-color text-base">
-                        www.github.com/mnnkhndlwl
+                        mnnkhndlwl
                       </p>
                     </div>
                   </a>
@@ -88,7 +88,7 @@ const Contact = () => {
                     <div class="w-full">
                       <h4 class="text-dark mb-1 text-xl font-bold">Linkedin</h4>
                       <p class="text-body-color text-base">
-                        www.linkedin.com/in/mnnkhndlwl/
+                        in/mnnkhndlwl/
                       </p>
                     </div>
                   </a>
@@ -116,7 +116,7 @@ const Contact = () => {
                       type="text"
                       name="name"
                       placeholder="Your Name"
-                      class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                      class="text-black border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                     />
                   </div>
                   <div class="mb-6">
@@ -124,7 +124,7 @@ const Contact = () => {
                       type="email"
                       name="email"
                       placeholder="Your Email"
-                      class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                      class="text-black border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                     />
                   </div>
                   <div class="mb-6">
@@ -150,7 +150,7 @@ const Contact = () => {
               }
                 </form>
                 <div>
-                  <span class="absolute -top-10 -right-9 z-[-1]">
+                  {/* <span class="absolute -top-10 -right-9 z-[-1]">
                     <svg
                       width="100"
                       height="100"
@@ -166,7 +166,7 @@ const Contact = () => {
                       />
                     </svg>
                   </span>
-                  <span class="absolute -right-10 top-[90px] z-[-1]">
+                  <span class="absolute right-10 top-[90px] z-[-1]">
                     <svg
                       width="34"
                       height="134"
@@ -385,7 +385,7 @@ const Contact = () => {
                         fill="#13C296"
                       />
                     </svg>
-                  </span>
+                  </span> */}
                   <span class="absolute -left-7 -bottom-7 z-[-1]">
                     <svg
                       width="107"

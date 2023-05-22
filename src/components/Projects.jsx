@@ -10,8 +10,8 @@ const Section = styled.div`
   width: 100%;
   height: 100vh;
   color: white;
-  background-color: #130f40;
-  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  background-color: black;
+  ${'' /* background-image: linear-gradient(315deg, #130f40 0%, #000000 74%); */}
   @media only screen and (max-width: 768px) {
     height: 100vh;
     width:80vw;
@@ -103,7 +103,7 @@ function Projects() {
         <div className="container mb-5 px-6 mx-auto">
           <section className="mb-5 text-white text-center">
             <h2 className="text-5xl sm:text-xl md:text-5xl font-bold mb-12 italic">
-              My {" "}
+            
               <span className="text-5xl font-extrabold text-transparent bg-clip-text bg-fuchsia-600">
                 Projects
               </span>

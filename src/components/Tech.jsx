@@ -9,8 +9,8 @@ const Section = styled.div`
   align-items: center;
   justify-content: space-around;
   color: white;
-  background-color: #130f40;
-  background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+  background-color: black;
+  ${'' /* background-image: linear-gradient(315deg, #130f40 0%, #000000 74%); */}
   @media only screen and (max-width: 768px) {
     scroll-snap-align: start;
     width:80vw;
