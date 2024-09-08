@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+       function downloadResume() {
+    const link = document.createElement('a');
+    link.href = './assets/mnnkhndlwllatestresume.pdf'; // Path to your resume file
+    link.download = 'MananKhandelwalFullStackDeveloper.pdf'; // Optional: Rename the file upon download
+    link.click();
+  }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#21152B",
+              secondary: "#805BA5",
+              "accent-1": "#BC519E",
+              "accent-2": "#D9E254",
+            },
+            container: {
+              center: true,
+              padding: {
+                DEFAULT: "1rem",
+                sm: "2rem",
+                lg: "4rem",
+                xl: "5rem",
+                "2xl": "6rem",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-primary text-white">
+    <header-component></header-component>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-16">
+      <section id="hero" class="py-20 md:py-32">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0 ">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-accent-2">
+              Backend Developer
+            </h1>
+            <p class="text-xl mb-8">
+              Crafting innovative web and mobile solutions with passion and
+              precision.
+            </p>
+            <div>
+              <button
+              onclick="downloadResume()"
+                class="bg-accent-1 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300"
+              >
+                Download Resume
+              </button>
+            </div>
+            
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/grogo-593ed.appspot.com/o/IMG_20240827_222543.jpg?alt=media&token=3dde2f95-26e3-489b-ab0e-afb457af0800"
+              alt="Full Stack Developer"
+              class="rounded-full w-64 h-64 object-cover mx-auto shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 bg-secondary bg-opacity-10 rounded-lg">
+        <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0 px-16">
+            <p class="text-lg mb-4 text-justify ">
+                I'm a backend-focused developer with a strong passion for building robust, scalable systems. While my expertise lies in backend technologies, I also have experience with frontend development, though my true strength is in designing and optimizing server-side logic.
+              </p>
+              <p class="text-lg text-justify">
+                My goal is to create powerful, efficient backend solutions that integrate seamlessly with user interfaces, solving complex problems and enhancing the overall application experience.
+              </p>
+              
+          </div>
+          <div class="md:w-1/2 pl-0 md:pl-8">
+            <h3 class="text-xl font-semibold mb-4">Skills</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div><i class="fab fa-node text-accent-2 mr-2"></i>Node.js</div>
+              <div><i class="fab fa-golang text-accent-2 mr-2"></i>Golang</div>
+              <div><i class="fab fa-react text-accent-2 mr-2"></i>React native</div>
+              <div><i class="fab fa-js text-accent-2 mr-2"></i>JavaScript</div>
+              <div><i class="fab fa-react text-accent-2 mr-2"></i>React.js</div>
+              <div>
+                <i class="fas fa-database text-accent-2 mr-2"></i>MongoDB
+              </div>
+              <div><i class="fab fa-git-alt text-accent-2 mr-2"></i>Git</div>
+              <div><i class="fab fa-docker text-accent-2 mr-2"></i>Docker</div>
+              <div>
+                <i class="fas fa-database text-accent-2 mr-2"></i>Postgresql
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-20">
+        <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <a
+            href="https://github.com/mnnkhndlwl/dochomeo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-secondary bg-opacity-10 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="./assets/project-1.png"
+              alt="Project 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Dochomeo</h3>
+              <p class="mb-4">
+                A full-featured online store with user authentication, product
+                management, and payment integration.
+              </p>
+              <div class="flex space-x-2">
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">React</span>
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">Node.js</span>
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">MongoDB</span>
+              </div>
+            </div>
+          </a>
+      
+          <!-- Project 2 -->
+          <a
+            href="https://github.com/mnnkhndlwl/kharido"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-secondary bg-opacity-10 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="./assets/project-2.png"
+              alt="Project 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">GROGO</h3>
+              <p class="mb-4">
+                Grocery delivery app built with react native and nodejs with
+                microservices architecture and mapbox for maps
+              </p>
+              <div class="flex space-x-2">
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">React Native</span>
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">Node.js</span>
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">MongoDB</span>
+              </div>
+            </div>
+          </a>
+      
+          <!-- Project 3 -->
+          <a
+            href="https://github.com/mnnkhndlwl/compilerXpress"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-secondary bg-opacity-10 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="./assets/project-3.png"
+              alt="Project 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">CompilerXpress</h3>
+              <p class="mb-4">
+                An online IDE built with ReactJS and NodeJS for executing code of
+                different languages
+              </p>
+              <div class="flex space-x-2">
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">ReactJS</span>
+                <span class="bg-accent-1 text-xs px-2 py-1 rounded">NodeJS</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      
+
+      <section
+        id="experience"
+        class="py-20 px-16 bg-secondary bg-opacity-10 rounded-lg"
+      >
+        <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
+        <div class="space-y-8">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-xl font-semibold">Full Stack Developer</h3>
+              <p class="text-accent-2">Badho Technologies</p>
+              <p>JUL 2024 - Present</p>
+            </div>
+            <div class="md:w-3/4 md:pl-8">
+              <ul class="list-disc pl-5 space-y-2">
+                <li>
+                 Implemented Video kyc video verification in Badho buyer and seller app
+                </li>
+                <li class="text-justify" >
+                  Implemented Business Verification Flow so that users can verify their business through various documents such as udyam adhar,gst certificate,etc. The whole screen in business verification is configable which means that the product team can customize the whole screen from db itself like what options to show and what text to show
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-xl font-semibold">Full Stack Developer Intern</h3>
+              <p class="text-accent-2">Badho Technologies</p>
+              <p>Mar 2024 - Jul 2024</p>
+            </div>
+            <div class="md:w-3/4 md:pl-8">
+              <ul class="list-disc pl-5 space-y-2">
+                <li class="text-justify" >
+                  Created a DB configurable marquee header for both buyer and seller apps, making it easier for the internal team to display important information.
+                </li>
+                <li class="text-justify" >
+                  Developed the "My Sellers" feature for the Badho Buyer app, enhancing user experience by providing information about sellers and nearby sellers.
+                </li>
+                <li class="text-justify" >
+                  Developed an employee master sign-in feature for support users, allowing them to log into ground staff accounts and resolve issues through a master sign-in mode.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-xl font-semibold">Full Stack Developer Intern</h3>
+              <p class="text-accent-2">Blackhatcode Technologies</p>
+              <p>Mar 2024 - Jul 2024</p>
+            </div>
+            <div class="md:w-3/4 md:pl-8">
+              <ul class="list-disc pl-5 space-y-2">
+                <li class="text-justify" >
+                  Developed and implemented an intuitive admin dashboard, revolutionizing product management by enabling seamless addition, deletion, and monitoring of products on the website.
+                </li>
+                <li class="text-justify" >
+                  Collaborated with a cross-functional team to enhance the checkout feature on the Dochomoe platform
+                </li>
+                <li class="text-justify" >
+                  Utilized the following tech stack:Nodejs, Reactjs, Expressjs,
+                  SKILLS
+                  Html CSS Javascript
+                  C++ Material UI
+                  Reactjs
+                  Nodejs
+                  React Native Microservices Docker Git
+                  TailwindCSS Expressjs
+                  Redux toolkit
+                  MongoDB API Gateway
+                  Nextjs
+                  MySql RabbitMQ
+                  OOPS
+                  MongoDB, Nextjs, Material UI, and Git.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="py-20">
+        <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
+        <div class="space-y-8">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-xl font-semibold">
+                B.tech in Computer Science and Engineering
+              </h3>
+              <p class="text-accent-2">Bhagwan Parshuram Institute of Technology</p>
+              <p>2020 - 2024</p>
+            </div>
+            <div class="md:w-3/4 md:pl-8">
+              <p>
+                Built an attendance app for the college teachers using django and deployed using apache web server
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 bg-secondary bg-opacity-10 rounded-lg">
+        <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+        <div class="max-w-2xl mx-auto">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block mb-2 font-semibold">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full px-4 py-2 rounded-lg bg-primary border border-secondary focus:outline-none focus:border-accent-2"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="block mb-2 font-semibold">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-2 rounded-lg bg-primary border border-secondary focus:outline-none focus:border-accent-2"
+                required
+              />
+            </div>
+            <div>
+              <label for="message" class="block mb-2 font-semibold"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="w-full px-4 py-2 rounded-lg bg-primary border border-secondary focus:outline-none focus:border-accent-2"
+                required
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="bg-accent-1 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-secondary bg-opacity-20 py-8">
+      <div class="container mx-auto px-4 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a
+            href="https://wwww.github.com/mnnkhndlwl"
+            class="text-white hover:text-accent-2 transition duration-300"
+            ><i class="fab fa-github text-2xl"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/mnnkhndlwl"
+            class="text-white hover:text-accent-2 transition duration-300"
+            ><i class="fab fa-linkedin text-2xl"></i
+          ></a>
+          
+        </div>
+        <p>&copy; 2024 Manan Khandelwal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+      class Header extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = `
+                    <header class="bg-primary shadow-md">
+                        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+                            <a href="#" class="text-2xl font-bold text-accent-2">MNNKHNDLWL</a>
+                            <div class="hidden md:flex space-x-6">
+                                <a href="#about" class="text-white hover:text-accent-2 transition duration-300">About</a>
+                                <a href="#projects" class="text-white hover:text-accent-2 transition duration-300">Projects</a>
+                                <a href="#experience" class="text-white hover:text-accent-2 transition duration-300">Experience</a>
+                                <a href="#education" class="text-white hover:text-accent-2 transition duration-300">Education</a>
+                                <a href="#contact" class="text-white hover:text-accent-2 transition duration-300">Contact</a>
+                            </div>
+                            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                                <i class="fas fa-bars text-2xl"></i>
+                            </button>
+                        </nav>
+                        <div id="mobile-menu" class="hidden md:hidden bg-primary">
+                            <a href="#about" class="block py-2 px-4 text-white hover:bg-secondary">About</a>
+                            <a href="#projects" class="block py-2 px-4 text-white hover:bg-secondary">Projects</a>
+                            <a href="#experience" class="block py-2 px-4 text-white hover:bg-secondary">Experience</a>
+                            <a href="#education" class="block py-2 px-4 text-white hover:bg-secondary">Education</a>
+                            <a href="#contact" class="block py-2 px-4 text-white hover:bg-secondary">Contact</a>
+                        </div>
+                    </header>
+                `;
+          this.initializeMenu();
+        }
+
+        initializeMenu() {
+          const mobileMenuButton = this.querySelector("#mobile-menu-button");
+          const mobileMenu = this.querySelector("#mobile-menu");
+          if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+            });
+          }
+        }
+      }
+
+      customElements.define("header-component", Header);
+
+      // GSAP Animations
+      gsap.from("#hero h1", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+      gsap.from("#hero p", { opacity: 0, y: 50, duration: 1, delay: 0.7 });
+      gsap.from("#hero a", { opacity: 0, y: 50, duration: 1, delay: 0.9 });
+      gsap.from("#hero img", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        delay: 1.1,
+      });
+
+      // Animate sections on scroll
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        gsap.from(section, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
