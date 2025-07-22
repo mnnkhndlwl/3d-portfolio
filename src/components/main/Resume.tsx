@@ -28,7 +28,7 @@ const ResumeSection = () => {
   return (
     <section
       id="resume"
-      className="bg-background text-foreground px-6 py-16 flex flex-col items-center min-h-screen"
+      className="text-foreground px-6 py-16 flex flex-col items-center min-h-screen"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

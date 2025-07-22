@@ -127,7 +127,7 @@ const Timeline: FC = () => {
   }))
 
   return (
-    <section id="experience" className="py-20 bg-background text-foreground transition-colors">
+    <section id="experience" className="py-20 text-foreground transition-colors">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

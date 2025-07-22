@@ -42,7 +42,7 @@ const HeroContent: FC = () => {
     <motion.section
       initial="hidden"
       animate="visible"
-      className="flex flex-col items-center justify-center text-center gap-8 px-4 sm:px-8 lg:px-16 lg:pt-5 w-full min-h-[calc(100vh-80px)] bg-background"
+      className="flex flex-col items-center justify-center text-center gap-8 px-4 sm:px-8 lg:px-16 lg:pt-5 w-full min-h-[calc(100vh-80px)]"
     >
       <motion.div variants={slideInFromTop} className="flex items-center gap-2">
         <Badge variant="secondary" className="bg-red-500 text-white dark:bg-red-500 font-extrabold">

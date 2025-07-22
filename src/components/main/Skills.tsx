@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative flex flex-col items-center justify-center gap-12 py-16 px-4 sm:px-8 min-h-[600px] bg-gradient-to-br from-background to-muted"
+      className="relative flex flex-col items-center justify-center gap-12 py-16 px-4 sm:px-8 min-h-[600px] from-background to-muted"
       aria-labelledby="skills-heading"
     >
       <div className="absolute inset-0 z-[-1] opacity-10 pointer-events-none">
